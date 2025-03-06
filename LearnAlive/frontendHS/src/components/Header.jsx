@@ -47,8 +47,8 @@ const Header = () => {
           </button>
         </form>
       )}
-      {/* ✅ 고려대학교 로고 */}
-      <img src={koreaLogo} alt="고려대학교 로고" className="logo" />
+      {/* ✅ 고려대학교 로고
+      <img src={koreaLogo} alt="고려대학교 로고" className="logo" /> */}
 
       {/* ✅ 교수자 로그인 모달 */}
       <PasswordModal isOpen={showModal} onClose={() => setShowModal(false)} />

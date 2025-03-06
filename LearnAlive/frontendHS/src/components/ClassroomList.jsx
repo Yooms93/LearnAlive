@@ -72,10 +72,16 @@ const ClassroomList = () => {
         {classrooms.length > 0 ? (
           classrooms.map((classroom) => (
             <li key={classroom.classId} className="classroom-item">
-              {/* ✅ 변경: 모든 강의실 클릭 시 ClassroomDetail로 이동 */}
+              {/* ✅ 변경: 모든 강의실 클릭 시 ClassroomDetail로 이동
               <Link to={`/classroom/${classroom.classId}`} className="classroom-link">
                 {classroom.className}
-              </Link>
+              </Link> */}
+
+              {/* ✅ 변경: 모든 강의실 클릭 시 boardpage 이동 */}
+              <Link to={`/classroom/${classroom.classId}/boards`} className="classroom-link">
+                {classroom.className}
+              </Link> */
+
               {user.role === "professor" && (
                 <div className="button-group">
                   <Link to={`/classroom/${classroom.classId}/settings`}>

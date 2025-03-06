@@ -4,13 +4,15 @@ import { AuthProvider } from "./context/AuthContext";  // ✅ import 확인!
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ClassroomList from "./components/ClassroomList";
-import ClassroomDetail from "./pages/ClassroomDetail";
+// import ClassroomDetail from "./pages/ClassroomDetail";
 import AttendancePage from "./pages/AttendancePage";
 import ManageAttendancePage from "./pages/ManageAttendancePage";
 import ClassSettings from "./pages/ClassSettings"; 
 import SurveyList from "./pages/SurveyList";
 import SurveyCreate from "./components/SurveyCreate";
 import SurveyDetail from "./components/SurveyDetail";
+import BoardPage from "./pages/BoardPage";
+import AddPostPage from "./components/AddPostPage";
 
 function TitleUpdater() {
   const location = useLocation(); // 현재 경로 감지
@@ -49,12 +51,16 @@ function App() {
         <main>
         <Routes>
           <Route path="/" element={<ClassroomList />} />
-          <Route path="/classroom/:classId" element={<ClassroomDetail />} />
+          {/* <Route path="/classroom/:classId" element={<ClassroomDetail />} /> */}
           <Route path="/classroom/:classId/attendance" element={<AttendancePage />} />
           <Route path="/classroom/:classId/manage-attendance" element={<ManageAttendancePage />} />
           <Route path="/classroom/:classId/surveys" element={<SurveyList />} />
           <Route path="/survey/create" element={<SurveyCreate />} />
           <Route path="/survey/:surveyId" element={<SurveyDetail />} />
+
+          <Route path="/classroom/:classId/boards" element={<BoardPage />} />
+          <Route path="/classroom/:classId/boards/addpost/:boardId" element={<AddPostPage />} /> {/* 게시글 추가 페이지 */}
+
           <Route path="/classroom/:classId/settings" element={<ClassSettings />} />
         </Routes>
         </main>

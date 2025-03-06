@@ -33,4 +33,9 @@
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatusCode"/>
     <fullyQualifiedTypeName name="com.korea.attendance.model.ClassDetail"/>
     <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="com.lms.attendance.repository.PostMapper"/>
+    <fullyQualifiedTypeName name="com.lms.attendance.service.PostService"/>
+    <fullyQualifiedTypeName name="com.lms.attendance.model.Post"/>
+    <fullyQualifiedTypeName name="com.lms.attendance.service.BoardService"/>
+    <fullyQualifiedTypeName name="com.lms.attendance.model.Board"/>
 </qualifiedTypeNameHistroy>
